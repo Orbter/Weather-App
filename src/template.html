@@ -5,5 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="place">
+        <div id="city">Tel Aviv</div>
+        <div class="contry">Israel</div>
+      </div>
+      <div class="search-header">
+        <input type="search" class="search-input" />
+        <button class="search-button">search</button>
+      </div>
+    </header>
+    <main>
+      <div class="the-weather">
+        <div class="weather-headline">What's the weather</div>
+        <div class="weather-gif">Here is the gif</div>
+        <div class="tempeture">25 C</div>
+        <div class="weather-name">sunny</div>
+        <div class="weather-data">
+          <div class="feels-like-container weather-mini-container">
+            <div class="feels-like-headline">Feels Like</div>
+            >
+            <div class="feels-like">27.5 C</div>
+          </div>
+          <div class="humidity-container weather-mini-container">
+            <div class="humidity-headline">Humidity</div>
+            <div class="humidity">50%</div>
+          </div>
+          <div class="chance-of-rain-container weather-mini-container">
+            <div class="chance-of-rain-headline">Chance Of Rain</div>
+            <div class="chance-of-rain">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="air-quality">
+        <div class="air-quality-headline">Air Quality</div>
+        <div class="air-quality-gif">Here is the gif</div>
+        <div class="air-speed-container">
+          <div class="air-speed-headline">Air Speed</div>
+          <div class="air-speed">2.5 km/h</div>
+        </div>
+        <div class="air-quality-number">10.5</div>
+        <div class="air-quality-name">West-southwest Wind</div>
+        <div class="air-quality-meter-container">
+          <div class="air-quality-meter-text">
+            <span>Good</span> <span>Unhealthy</span><span>Hazardous</span>
+          </div>
+          <div class="air-quality-meter"><div class="meter">----</div></div>
+        </div>
+      </div>
+      <div class="temperature-today-container">
+        <h1 class="temperature-today-headline">Temperature today</h1>
+        <div class="temperature-today-graph">
+          <div class="graph">graph here</div>
+        </div>
+      </div>
+      <div class="weather-prediction">
+        <div class="weather-tomorrow-container">
+          <h3 class="weather-tomorrow-headline">tomorrow</h3>
+          <div class="weather-tomorrow-gif">gif here</div>
+          <div class="weather-tomorrow-number">25 C</div>
+          <div class="weather-tomorrow-text">sunny</div>
+        </div>
+        <div class="weather-prediction-mini-container" id="two-days">
+          <div class="weather-prediction-mini-gif">gif here</div>
+          <div class="weather-prediction-mini-num">14 C</div>
+          <div class="weather-prediction-mini-text">Patchy rain nearby</div>
+        </div>
+        <div class="weather-prediction-mini-container" id="three-days">
+          <div class="weather-prediction-mini-gif">gif here</div>
+          <div class="weather-prediction-mini-num">9 C</div>
+          <div class="weather-prediction-mini-text">freezing</div>
+        </div>
+        <div class="weather-prediction-mini-container" id="four-days">
+          <div class="weather-prediction-mini-gif">gif here</div>
+          <div class="weather-prediction-mini-num">30 C</div>
+          <div class="weather-prediction-mini-text">sunny</div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
