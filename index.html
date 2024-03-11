@@ -5,5 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   <script defer src="main.js"></script></head>
-  <body></body>
+  <body>
+    <nav>
+      <div class="navbar">
+        <div class="navhader">
+          <img src="icons/close.svg" alt="close nav bar" />
+        </div>
+        <div class="search-header">
+          <input type="search" class="search-input" />
+          <button class="search-button">search</button>
+        </div>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="place">
+        <div class="city">Tel Aviv</div>
+        <div class="country">Israel</div>
+      </div>
+      <div class="list">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.2"
+          baseProfile="tiny"
+          viewBox="0.00 0.00 512.00 512.00"
+        >
+          <path
+            fill="#000000"
+            d="
+          M 426.69 138.78
+          L 426.67 351.90
+          A 74.78 74.78 0.0 0 1 351.89 426.68
+          L 138.78 426.68
+          A 74.78 74.78 0.0 0 1 64.00 351.90
+          L 63.98 138.77
+          A 74.78 74.78 0.0 0 1 138.77 63.98
+          L 351.91 64.00
+          A 74.78 74.78 0.0 0 1 426.69 138.78
+          Z
+          M 351.94 405.32
+          A 53.38 53.38 0.0 0 0 405.32 351.94
+          L 405.31 138.69
+          A 53.38 53.38 0.0 0 0 351.93 85.31
+          L 138.70 85.32
+          A 53.38 53.38 0.0 0 0 85.32 138.70
+          L 85.31 351.93
+          A 53.38 53.38 0.0 0 0 138.69 405.31
+          L 351.94 405.32
+          Z"
+          />
+          <rect
+            fill="#000000"
+            x="170.73"
+            y="170.71"
+            width="149.22"
+            height="21.28"
+            rx="10.47"
+          />
+          <rect
+            fill="#000000"
+            x="170.73"
+            y="234.71"
+            width="149.22"
+            height="21.28"
+            rx="10.47"
+          />
+          <rect
+            fill="#000000"
+            x="170.73"
+            y="298.71"
+            width="149.22"
+            height="21.28"
+            rx="10.47"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <main>
+      <div class="the-weather">
+        <div class="weather-headline">What's the weather</div>
+        <div class="weather-gif">Here is the gif</div>
+        <div class="tempeture">25 C</div>
+        <div class="weather-name">sunny</div>
+        <div class="weather-data">
+          <div class="feels-like-container weather-mini-container">
+            <div class="feels-like-headline">Feels Like</div>
+            >
+            <div class="feels-like">27.5 C</div>
+          </div>
+          <div class="humidity-container weather-mini-container">
+            <div class="humidity-headline">Humidity</div>
+            <div class="humidity">50%</div>
+          </div>
+          <div class="chance-of-rain-container weather-mini-container">
+            <div class="chance-of-rain-headline">Chance Of Rain</div>
+            <div class="chance-of-rain">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="air-quality">
+        <div class="air-quality-headline">Air Quality</div>
+        <div class="air-quality-gif">Here is the gif</div>
+        <div class="air-speed-container">
+          <div class="air-speed-headline">Air Speed</div>
+          <div class="air-speed">2.5 km/h</div>
+        </div>
+        <div class="air-quality-number">10.5</div>
+        <div class="air-quality-name">West-southwest Wind</div>
+        <div class="air-quality-meter-container">
+          <div class="air-quality-meter-text">
+            <span>Good</span> <span>Unhealthy</span><span>Hazardous</span>
+          </div>
+          <div class="air-quality-meter"><div class="meter">----</div></div>
+        </div>
+      </div>
+      <div class="temperature-today-container">
+        <h1 class="temperature-today-headline">Temperature today</h1>
+        <div class="temperature-today-graph">
+          <div class="graph">graph here</div>
+        </div>
+      </div>
+      <div class="weather-prediction">
+        <div class="weather-tomorrow-container">
+          <h3 class="weather-tomorrow-headline">tomorrow</h3>
+          <div class="weather-tomorrow-gif">gif here</div>
+          <div class="weather-tomorrow-number">25 C</div>
+          <div class="weather-tomorrow-text">sunny</div>
+        </div>
+        <div class="weather-prediction-mini-container" id="two-days">
+          <div class="weather-prediction-mini-gif">gif here</div>
+          <div class="weather-prediction-mini-num">14 C</div>
+          <div class="weather-prediction-mini-text">Patchy rain nearby</div>
+        </div>
+        <div class="weather-prediction-mini-container" id="three-days">
+          <div class="weather-prediction-mini-gif">gif here</div>
+          <div class="weather-prediction-mini-num">9 C</div>
+          <div class="weather-prediction-mini-text">freezing</div>
+        </div>
+        <div class="weather-prediction-mini-container" id="four-days">
+          <div class="weather-prediction-mini-gif">gif here</div>
+          <div class="weather-prediction-mini-num">30 C</div>
+          <div class="weather-prediction-mini-text">sunny</div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
