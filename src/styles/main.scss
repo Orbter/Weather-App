@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+
+  //font-family: 'Roboto', sans-serif;
+}
+.header {
+  display: flex;
+}
+.place {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: start;
+}
+.city {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+.country {
+  font-size: 1.2rem;
+}
+.list svg {
+  height: 45px;
+}
+.list {
+  margin: 5px;
+}
+.navbar {
+  background-color: rgba(216, 216, 230, 0.92);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  transition: opacity 0.2s; /* Specific transition */
+  opacity: 0; /* Start with invisible */
+  pointer-events: none; /* Prevent interaction when invisible */
+}
+
+.clicked {
+  opacity: 1;
+  pointer-events: auto; /* Allow interaction */
+}
+
+.un-clicked {
+  opacity: 0;
+  /* Removed display: none; */
+  pointer-events: none; /* Prevent interaction */
+}
+
+.navhader {
+  width: 25px;
+  margin: 10px;
+  position: absolute;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo svg {
+  width: 120px;
+  padding: 10px;
+}
+.logo-text {
+  font-family: 'Pacifico', cursive;
+  color: #085d9e;
+  font-size: 1.15rem;
+}
+.search-button {
+  background-color: white;
+  border: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.search-input {
+  font-family: 'Lato', sans-serif;
+
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.search-header {
+  margin-top: 20px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 0 2px rgba(0, 0, 0, 0.05);
+  width: 90vw;
+  height: 90vw;
+  border-radius: 20px;
+}
