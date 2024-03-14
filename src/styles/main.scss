@@ -106,7 +106,72 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.15);
   background-color: rgb(255, 255, 255);
   box-shadow: 4px 4px 0 2px rgba(0, 0, 0, 0.05);
-  width: 90vw;
-  height: 90vw;
+  width: 80vw;
+  height: 80vw;
   border-radius: 20px;
+  padding: 20px;
+}
+.the-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.weather-headline {
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.weather-gif {
+  width: 90px;
+  height: 90px;
+  background-color: aqua;
+}
+.weather-info-container {
+  display: flex;
+  flex-direction: column;
+}
+.weather-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.temperature {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.weather-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.weather-mini-container {
+  width: 100px;
+  height: 85px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.feels-like-container {
+  background-color: #ba181b;
+}
+.humidity-container {
+  background-color: #48bfe3;
+}
+.chance-of-rain-container {
+  background-color: #1f2544;
+}
+.weather-data-headline {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.weather-data-number {
+  font-size: 1.4rem;
+  font-weight: 600;
 }

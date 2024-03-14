@@ -1712,22 +1712,31 @@
     <main class="main">
       <div class="the-weather card">
         <div class="weather-headline">What's the weather</div>
-        <div class="weather-gif">Here is the gif</div>
-        <div class="tempeture">25 C</div>
-        <div class="weather-name">sunny</div>
+        <div class="weather-info">
+          <div class="weather-gif"></div>
+          <div class="weather-info-container">
+            <div class="temperature">25 C</div>
+            <div class="weather-name">sunny</div>
+          </div>
+        </div>
+
         <div class="weather-data">
           <div class="feels-like-container weather-mini-container">
-            <div class="feels-like-headline">Feels Like</div>
-            >
-            <div class="feels-like">27.5 C</div>
+            <div class="feels-like-headline weather-data-headline">
+              Feels Like
+            </div>
+
+            <div class="feels-like weather-data-number">27.5 C</div>
           </div>
           <div class="humidity-container weather-mini-container">
-            <div class="humidity-headline">Humidity</div>
-            <div class="humidity">50%</div>
+            <div class="humidity-headline weather-data-headline">Humidity</div>
+            <div class="humidity weather-data-number">50%</div>
           </div>
           <div class="chance-of-rain-container weather-mini-container">
-            <div class="chance-of-rain-headline">Chance Of Rain</div>
-            <div class="chance-of-rain">70%</div>
+            <div class="chance-of-rain-headline weather-data-headline">
+              Rain
+            </div>
+            <div class="chance-of-rain weather-data-number">70%</div>
           </div>
         </div>
       </div>
