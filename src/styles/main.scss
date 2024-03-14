@@ -108,8 +108,13 @@ body {
   box-shadow: 4px 4px 0 2px rgba(0, 0, 0, 0.05);
   width: 80vw;
   height: 80vw;
+  min-height: 340px;
   border-radius: 20px;
   padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 20px;
 }
 .the-weather {
   display: flex;
@@ -139,17 +144,22 @@ body {
   gap: 30px;
 }
 .temperature {
-  font-size: 4rem;
+  font-size: clamp(3rem, 4rem, 5rem);
   font-weight: 600;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Hide overflow */
 }
 .weather-data {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  box-sizing: border-box; /* Ensures padding does not add to the total width */
 }
 .weather-mini-container {
-  width: 100px;
+  flex: 1 0 calc(33.333% - 20px); /* flex-grow, flex-shrink, flex-basis */
+  margin: 0 4%;
+  min-width: 83px;
   height: 85px;
   border-radius: 12px;
   color: white;
@@ -157,6 +167,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
 }
 .feels-like-container {
   background-color: #ba181b;
@@ -174,4 +185,89 @@ body {
 .weather-data-number {
   font-size: 1.4rem;
   font-weight: 600;
+}
+.air-quality-headline {
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.air-quality-gif {
+  width: 90px;
+  height: 90px;
+  background-color: aqua;
+}
+.air-quality-info {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+.air-speed {
+  font-size: 3.7rem;
+  font-weight: 600;
+}
+.air-speed-number {
+  display: flex;
+  gap: 10px;
+}
+.air-speed-values {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.air-quality-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.air-quality-number {
+  font-size: 2.9rem;
+  font-weight: 600;
+}
+.air-quality-units {
+  background-color: #defc74;
+  border-radius: 8px;
+  color: #000;
+  font-size: 16px;
+  height: fit-content;
+  padding: 4px 8px;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.air-quality-num-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.air-quality-meter-container {
+  border: 3px solid rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+}
+.air-quality-meter-text {
+  display: flex;
+  justify-content: space-evenly;
+}
+.air-quality-meter {
+  width: 90%;
+  height: 5px;
+  background-color: rgba(207, 207, 207, 0.993);
+  border-radius: 20px;
+}
+.air-quality-inside {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.meter {
+  background-color: orangered;
+  width: 60%;
+  height: 5px;
+  border-radius: 20px;
 }
