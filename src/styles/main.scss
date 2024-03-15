@@ -133,6 +133,7 @@ body {
   width: 90px;
   height: 90px;
   background-color: aqua;
+  min-width: 90px;
 }
 .weather-info-container {
   display: flex;
@@ -148,6 +149,8 @@ body {
   font-weight: 600;
   white-space: nowrap; /* Prevent wrapping */
   overflow: hidden; /* Hide overflow */
+  display: flex;
+  gap: 10px;
 }
 .weather-data {
   display: flex;
@@ -197,6 +200,7 @@ body {
 .air-quality-gif {
   width: 90px;
   height: 90px;
+  min-width: 90px;
   background-color: aqua;
 }
 .air-quality-info {
@@ -270,4 +274,80 @@ body {
   width: 60%;
   height: 5px;
   border-radius: 20px;
+}
+.temperature-today-graph {
+  width: 80%;
+  height: 250px;
+}
+.chart {
+  width: 100%;
+  height: 100%;
+}
+.weather-tomorrow-container {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+.weather-prediction {
+  width: 80vw;
+  height: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 0 2px rgba(0, 0, 0, 0.05);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.tomorrow-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+}
+.tomorrow-info {
+  display: flex;
+  flex-direction: column;
+}
+.weather-tomorrow-gif {
+  width: 90px;
+  height: 90px;
+  background-color: aqua;
+  min-width: 90px;
+}
+.weather-tomorrow-number {
+  font-size: 3.7rem;
+  font-weight: 600;
+}
+.weather-tomorrow-values {
+  display: flex;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.tomorrow-number-container {
+  display: flex;
+  gap: 10px;
+}
+.weather-prediction-mini-container {
+  height: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  width: 90%;
+  border-radius: 70px;
+  display: flex;
+}
+.weather-prediction-container {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+
+  box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

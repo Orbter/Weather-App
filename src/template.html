@@ -1715,7 +1715,10 @@
         <div class="weather-info">
           <div class="weather-gif"></div>
           <div class="weather-info-container">
-            <div class="temperature">25 C</div>
+            <div class="temperature">
+              <div class="weather-tomorrow-number">25</div>
+              <div class="weather-tomorrow-values">C</div>
+            </div>
             <div class="weather-name">sunny</div>
           </div>
         </div>
@@ -1769,33 +1772,44 @@
           </div>
         </div>
       </div>
-      <div class="temperature-today-container">
+      <div class="temperature-today-container card">
         <h1 class="temperature-today-headline">Temperature today</h1>
         <div class="temperature-today-graph">
-          <div class="graph">graph here</div>
+          <canvas id="chart" class="chart"></canvas>
         </div>
       </div>
       <div class="weather-prediction">
-        <div class="weather-tomorrow-container">
+        <div class="weather-tomorrow-container" id="today">
           <h3 class="weather-tomorrow-headline">tomorrow</h3>
-          <div class="weather-tomorrow-gif">gif here</div>
-          <div class="weather-tomorrow-number">25 C</div>
-          <div class="weather-tomorrow-text">sunny</div>
+          <div class="tomorrow-container">
+            <div class="weather-tomorrow-gif"></div>
+            <div class="tomorrow-info">
+              <div class="tomorrow-number-container">
+                <div class="weather-tomorrow-number">25</div>
+                <div class="weather-tomorrow-values">C</div>
+              </div>
+              <div class="weather-tomorrow-text">sunny</div>
+            </div>
+          </div>
         </div>
-        <div class="weather-prediction-mini-container" id="two-days">
-          <div class="weather-prediction-mini-gif">gif here</div>
-          <div class="weather-prediction-mini-num">14 C</div>
-          <div class="weather-prediction-mini-text">Patchy rain nearby</div>
-        </div>
-        <div class="weather-prediction-mini-container" id="three-days">
-          <div class="weather-prediction-mini-gif">gif here</div>
-          <div class="weather-prediction-mini-num">9 C</div>
-          <div class="weather-prediction-mini-text">freezing</div>
-        </div>
-        <div class="weather-prediction-mini-container" id="four-days">
-          <div class="weather-prediction-mini-gif">gif here</div>
-          <div class="weather-prediction-mini-num">30 C</div>
-          <div class="weather-prediction-mini-text">sunny</div>
+        <div class="weather-prediction-container">
+          <div class="weather-prediction-mini-container" id="two-days">
+            <div class="weather-prediction-mini-gif">gif here</div>
+            <div>
+              <div class="weather-prediction-mini-num">14 C</div>
+              <div class="weather-prediction-mini-text">Patchy rain nearby</div>
+            </div>
+          </div>
+          <div class="weather-prediction-mini-container" id="three-days">
+            <div class="weather-prediction-mini-gif">gif here</div>
+            <div class="weather-prediction-mini-num">9 C</div>
+            <div class="weather-prediction-mini-text">freezing</div>
+          </div>
+          <div class="weather-prediction-mini-container" id="four-days">
+            <div class="weather-prediction-mini-gif">gif here</div>
+            <div class="weather-prediction-mini-num">30 C</div>
+            <div class="weather-prediction-mini-text">sunny</div>
+          </div>
         </div>
       </div>
     </main>
