@@ -340,7 +340,8 @@ body {
   border-radius: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  gap: 25px;
+  justify-content: center;
 }
 .weather-prediction-container {
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -352,9 +353,31 @@ body {
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  gap: 20px;
 }
 .weather-mini-container-prediction {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 90%;
+  min-width: 140px;
+}
+.weather-prediction-num {
+  gap: 10px;
+
+  display: flex;
+}
+.weather-prediction-mini-num {
+  font-size: 2.2rem;
+  font-weight: 600;
+  height: fit-content;
+}
+.weather-prediction-mini-values {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.weather-prediction-mini-text {
+  font-size: 0.9rem;
 }
