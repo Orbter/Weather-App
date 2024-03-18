@@ -1710,69 +1710,149 @@
     </header>
 
     <main class="main">
-      <div class="the-weather card">
-        <div class="weather-headline">What's the weather</div>
-        <div class="weather-info">
-          <div class="weather-gif"></div>
-          <div class="weather-info-container">
-            <div class="temperature">
-              <div class="weather-tomorrow-number">25</div>
-              <div class="weather-tomorrow-values">C</div>
+      <div class="carousel">
+        <button class="carousel-button carousel-button-left is-hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.2"
+            baseProfile="tiny"
+            viewBox="0.00 0.00 512.00 512.00"
+          >
+            <path
+              fill="#000000"
+              d="
+            M 360.33 0.00
+            L 363.01 0.00
+            Q 373.97 0.90 381.72 8.53
+            Q 390.35 17.02 398.05 24.90
+            C 406.96 34.01 409.00 47.84 402.60 58.79
+            Q 400.50 62.37 393.38 69.48
+            Q 299.39 163.33 206.94 255.89
+            A 0.28 0.28 0.0 0 0 206.94 256.28
+            Q 299.27 348.80 392.48 441.81
+            Q 401.19 450.50 403.05 454.37
+            C 408.26 465.19 406.76 477.93 398.34 486.59
+            Q 391.07 494.06 381.34 503.59
+            Q 373.61 511.16 362.69 512.00
+            L 360.00 512.00
+            Q 348.90 511.06 341.29 503.46
+            Q 227.78 389.97 114.27 276.49
+            Q 105.74 267.97 105.66 256.25
+            Q 105.57 244.70 114.00 236.25
+            Q 224.53 125.51 341.10 8.86
+            Q 349.04 0.91 360.33 0.00
+            Z"
+            />
+          </svg>
+        </button>
+        <div class="carousel-tracker">
+          <div class="carousel-tracker-continer">
+            <div class="the-weather card current-slide-card">
+              <div class="weather-headline">What's the weather</div>
+              <div class="weather-info">
+                <div class="weather-gif"></div>
+                <div class="weather-info-container">
+                  <div class="temperature">
+                    <div class="weather-tomorrow-number">25</div>
+                    <div class="weather-tomorrow-values">C</div>
+                  </div>
+                  <div class="weather-name">sunny</div>
+                </div>
+              </div>
+
+              <div class="weather-data">
+                <div class="feels-like-container weather-mini-container">
+                  <div class="feels-like-headline weather-data-headline">
+                    Feels Like
+                  </div>
+
+                  <div class="feels-like weather-data-number">27.5 C</div>
+                </div>
+                <div class="humidity-container weather-mini-container">
+                  <div class="humidity-headline weather-data-headline">
+                    Humidity
+                  </div>
+                  <div class="humidity weather-data-number">50%</div>
+                </div>
+                <div class="chance-of-rain-container weather-mini-container">
+                  <div class="chance-of-rain-headline weather-data-headline">
+                    Rain
+                  </div>
+                  <div class="chance-of-rain weather-data-number">70%</div>
+                </div>
+              </div>
             </div>
-            <div class="weather-name">sunny</div>
+            <div class="air-quality card">
+              <div class="air-quality-headline">Air Quality</div>
+              <div class="air-quality-info">
+                <div class="air-quality-gif"></div>
+                <div class="air-speed-container">
+                  <div class="air-speed-number">
+                    <div class="air-speed">2.5</div>
+                    <div class="air-speed-values">km/h</div>
+                  </div>
+                  <div class="air-speed-headline">Air Speed</div>
+                </div>
+              </div>
+              <div class="air-quality-container">
+                <div class="air-quality-num-container">
+                  <div class="air-quality-number">10.5</div>
+                  <div class="air-quality-units">AQI</div>
+                </div>
+                <div class="air-quality-name">West-southwest Wind</div>
+              </div>
+
+              <div class="air-quality-meter-container">
+                <div class="air-quality-meter-text">
+                  <span>Good</span> <span>Unhealthy</span><span>Hazardous</span>
+                </div>
+                <div class="air-quality-inside">
+                  <div class="air-quality-meter"><div class="meter"></div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="weather-data">
-          <div class="feels-like-container weather-mini-container">
-            <div class="feels-like-headline weather-data-headline">
-              Feels Like
-            </div>
-
-            <div class="feels-like weather-data-number">27.5 C</div>
-          </div>
-          <div class="humidity-container weather-mini-container">
-            <div class="humidity-headline weather-data-headline">Humidity</div>
-            <div class="humidity weather-data-number">50%</div>
-          </div>
-          <div class="chance-of-rain-container weather-mini-container">
-            <div class="chance-of-rain-headline weather-data-headline">
-              Rain
-            </div>
-            <div class="chance-of-rain weather-data-number">70%</div>
-          </div>
+        <button class="carousel-button carousel-button-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.2"
+            baseProfile="tiny"
+            viewBox="0.00 0.00 512.00 512.00"
+          >
+            <path
+              fill="#000000"
+              d="
+            M 149.31 0.00
+            L 152.00 0.00
+            Q 163.15 0.95 170.97 8.78
+            Q 282.41 120.23 393.84 231.68
+            Q 400.47 238.31 402.73 242.10
+            Q 406.17 247.85 406.30 255.71
+            Q 406.48 267.20 397.98 275.73
+            Q 302.50 371.52 170.37 503.62
+            Q 162.91 511.09 151.67 512.00
+            L 148.96 512.00
+            Q 138.02 511.10 130.27 503.48
+            Q 117.14 490.57 113.64 486.86
+            C 105.03 477.73 103.06 464.12 109.34 453.30
+            Q 111.47 449.64 118.44 442.68
+            Q 212.78 348.51 305.07 256.09
+            A 0.33 0.32 -45.7 0 0 305.07 255.64
+            Q 210.37 161.01 114.48 65.02
+            C 103.38 53.91 102.85 36.58 113.93 25.17
+            Q 122.09 16.78 130.51 8.51
+            Q 138.30 0.85 149.31 0.00
+            Z"
+            />
+          </svg>
+        </button>
+        <div class="carousel-nav">
+          <div class="carousel-indicator current-slide"></div>
+          <div class="carousel-indicator"></div>
         </div>
       </div>
-      <div class="air-quality card">
-        <div class="air-quality-headline">Air Quality</div>
-        <div class="air-quality-info">
-          <div class="air-quality-gif"></div>
-          <div class="air-speed-container">
-            <div class="air-speed-number">
-              <div class="air-speed">2.5</div>
-              <div class="air-speed-values">km/h</div>
-            </div>
-            <div class="air-speed-headline">Air Speed</div>
-          </div>
-        </div>
-        <div class="air-quality-container">
-          <div class="air-quality-num-container">
-            <div class="air-quality-number">10.5</div>
-            <div class="air-quality-units">AQI</div>
-          </div>
-          <div class="air-quality-name">West-southwest Wind</div>
-        </div>
-
-        <div class="air-quality-meter-container">
-          <div class="air-quality-meter-text">
-            <span>Good</span> <span>Unhealthy</span><span>Hazardous</span>
-          </div>
-          <div class="air-quality-inside">
-            <div class="air-quality-meter"><div class="meter"></div></div>
-          </div>
-        </div>
-      </div>
-      <div class="temperature-today-container card">
+      <div class="temperature-today-container card-special">
         <h1 class="temperature-today-headline">Temperature today</h1>
         <div class="temperature-today-graph">
           <canvas id="chart" class="chart"></canvas>

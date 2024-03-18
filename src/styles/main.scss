@@ -42,6 +42,7 @@ body {
   transition: opacity 0.2s; /* Specific transition */
   opacity: 0; /* Start with invisible */
   pointer-events: none; /* Prevent interaction when invisible */
+  z-index: 10;
 }
 
 .clicked {
@@ -97,6 +98,65 @@ body {
 .search-header {
   margin-top: 20px;
 }
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 390px;
+  margin-bottom: 30px;
+  flex-direction: column;
+}
+.carousel-tracker {
+  height: 100%;
+  width: 90%;
+  overflow: hidden;
+}
+.carousel-tracker-continer {
+  transition: transform 250ms ease-in;
+
+  height: 100%;
+  position: relative;
+  width: 100%; /* Ensure this container stretches to the width of its parent */
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  z-index: 10;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.carousel-button-left {
+  left: 0;
+}
+.carousel-button-right {
+  right: 0;
+}
+.carousel-button svg {
+  right: 0;
+}
+.carousel-nav {
+  position: absolute;
+  bottom: -23px; /* Add 'px' to specify pixels */
+  display: flex;
+  gap: 13px;
+}
+.carousel-indicator {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.current-slide {
+  background-color: #4895ef;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -104,6 +164,34 @@ body {
   align-items: center;
 }
 .card {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 4px 4px 0 2px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 340px;
+  padding: 20px;
+}
+.the-weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  height: 390px;
+}
+.weather-headline {
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.card-special {
   border: 1px solid rgba(0, 0, 0, 0.15);
   background-color: rgb(255, 255, 255);
   box-shadow: 4px 4px 0 2px rgba(0, 0, 0, 0.05);
@@ -115,20 +203,6 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin: 20px;
-}
-.the-weather {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.weather-headline {
-  font-weight: 700;
-  font-size: 1.8rem;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 20px;
 }
 .weather-gif {
   width: 90px;
@@ -190,6 +264,8 @@ body {
   font-size: 1.4rem;
   font-weight: 600;
 }
+.air-quality {
+}
 .air-quality-headline {
   font-weight: 700;
   font-size: 1.8rem;
@@ -208,7 +284,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 30px;
+  gap: 15px;
 }
 .air-speed {
   font-size: 3.7rem;
@@ -381,4 +457,7 @@ body {
 }
 .weather-prediction-mini-text {
   font-size: 0.9rem;
+}
+.is-hidden {
+  display: none;
 }
