@@ -5,16 +5,25 @@ function moveSlides() {
   const rightButton = document.querySelector('.carousel-button-right');
   const carouselNav = document.querySelector('.carousel-nav');
   const dots = Array.from(carouselNav.children);
-  const slideWidth = slides[0].getBoundingClientRect().width;
+  let slideWidth = slides[0].getBoundingClientRect().width;
 
   const setsSlidePosition = (slide, index) => {
     slide.style.left = slideWidth * index + 'px';
   };
 
+  window.addEventListener('resize', () => {
+    // Recalculate slide width
+    slideWidth = slides[0].getBoundingClientRect().width;
+    // Reapply positions with the new width
+    slides.forEach(setsSlidePosition);
+    // Potentially move to the current slide again to adjust positioning
+  });
+
   const moveToSlide = (tracking, currentSlide, targetSlide) => {
     tracking.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide-card');
     targetSlide.classList.add('current-slide-card');
+    console.log(slideWidth);
   };
   const updateDots = (currentDot, targetDot) => {
     targetDot.classList.add('current-slide');
