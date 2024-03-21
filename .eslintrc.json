@@ -9,6 +9,8 @@
     "ecmaVersion": 12
   },
   "rules": {
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "no-plusplus": "off",
+    "no-unused-vars": "warn"
   }
 }

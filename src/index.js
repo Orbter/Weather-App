@@ -4,8 +4,8 @@ import createChart from './related/graph';
 import { moveSlides } from './related/carousel';
 import { getData } from './related/data';
 
-
 navCreate();
 createChart();
 moveSlides();
-getData();
+const obj = await getData('tel aviv');
+console.log(obj.city);
