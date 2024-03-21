@@ -1,6 +1,7 @@
 import { getData } from './data';
+import { createChart } from './graph';
 
-function updatingUi() {
+async function updatingUi(location) {
   // getting all the elements
   const city = document.querySelector('.city');
   const country = document.querySelector('.country');
@@ -22,4 +23,29 @@ function updatingUi() {
   const threeDaysText = document.querySelector('.three-days-text');
   const fourDays = document.querySelector('.four-days');
   const fourDaysText = document.querySelector('.four-days-text');
+  const data = await getData(location);
+
+  city.innerText = data.city;
+  country.innerText = data.country;
+  weatherNumber.innerText = data.tempToday;
+  weatherText.innerText = data.condition;
+  feelsLike.innerText = `${data.feelsLike}%`;
+  humidity.innerText = `${data.humidity}%`;
+  chanceOfRain.innerText = `${data.rain}%`;
+  airSpeed.innerText = data.windSpeed;
+  airQuality.innerText = data.AQI;
+  airQualityName.innerText = data.windDirection;
+  Tomorrow.innerText = data.tomorrowTemp;
+  TomorrowText.innerText = data.conditionTomorrow;
+  twoDays.innerText = data.twoDatesTemp;
+  twoDaysText.innerText = data.conditionTwoDays;
+  threeDays.innerText = data.threeDaysTemp;
+  threeDaysText.innerText = data.conditionThreeDay;
+  fourDays.innerText = data.fourDaysTemp;
+  fourDaysText.innerText = data.conditionFourDays;
+
+  const hourly = data.hourTemp;
+  await createChart(hourly);
 }
+
+export { updatingUi };

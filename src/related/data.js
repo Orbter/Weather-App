@@ -11,7 +11,7 @@ async function getData(location) {
   const country = data.location.country;
   const tempToday = data.current.temp_c;
   const feelsLike = data.current.feelslike_c;
-  const humidity = data.current;
+  const humidity = data.current.humidity;
 
   const forecastDay = data.forecast.forecastday[0];
 
@@ -34,8 +34,10 @@ async function getData(location) {
   const rain = forecastDay.day.daily_chance_of_rain;
 
   // hour temperature
-  const hourTemp = forecastDay.hour;
+  const hourArray = forecastDay.hour;
+  const hourTemp = objToArray(hourArray);
 
+  console.log(hourTemp);
   // wind
   const windSpeed = data.current.wind_kph;
   const windDirection = data.current.wind_dir;
@@ -128,6 +130,15 @@ function calculatePM25AQI(concentration) {
     breakpoint.lowAQI;
 
   return Math.round(AQI); // Round the result to the nearest whole number
+}
+function objToArray(array) {
+  const newArray = [];
+  for (let i = 0; i < 24; i++) {
+    const obj = array[i];
+    const temp = obj.temp_c;
+    newArray.push(temp);
+  }
+  return newArray;
 }
 
 // Example usage

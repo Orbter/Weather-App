@@ -1,7 +1,7 @@
 // ./related/graph.js
 import Chart from 'chart.js/auto';
 
-function createChart() {
+function createChart(array) {
   const ctx = document.getElementById('chart').getContext('2d');
   const itemsLabels = [
     '00',
@@ -29,10 +29,9 @@ function createChart() {
     '22',
     '23',
   ];
-  const itemData = [
-    16, 15, 15, 15, 14, 14, 14, 14, 16, 18, 20, 22, 22, 20, 20, 20, 20, 19, 18,
-    18, 17, 17, 16, 16,
-  ];
+  const itemData = array;
+
+  // console.log(`hi${itemData}`);
   const graphData = {
     labels: itemsLabels,
     datasets: [
@@ -64,4 +63,4 @@ function createChart() {
   return new Chart(ctx, config);
 }
 
-export default createChart;
+export { createChart };
