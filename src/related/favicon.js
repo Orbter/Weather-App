@@ -15,8 +15,6 @@ import drizzle from '../icons/drop.gif';
 import house from '../icons/house.gif';
 
 function faviconGif(weather, place) {
-  console.log(weather);
-
   const img = place;
   const now = new Date();
   const hour = now.getHours();
@@ -25,8 +23,6 @@ function faviconGif(weather, place) {
   } else if (weather.trim() === 'Clear') {
     img.src = night;
   } else if (weather.trim() === 'Partly Cloudy') {
-    console.log('been here 1');
-
     if (hour >= 18 || hour < 6) {
       img.src = cloudyNight;
     } else {

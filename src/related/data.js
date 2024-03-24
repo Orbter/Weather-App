@@ -38,7 +38,6 @@ async function getData(location) {
   const hourArray = forecastDay.hour;
   const hourTemp = objToArray(hourArray);
 
-  console.log(tempToday);
   // wind
   const windSpeed = data.current.wind_kph;
   const windDirection = data.current.wind_dir;

@@ -39,7 +39,6 @@ function moveSlides() {
     tracking.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide-card');
     targetSlide.classList.add('current-slide-card');
-    console.log(slideWidth);
   };
   const updateDots = (currentDot, targetDot) => {
     currentDot.classList.remove('current-slide');

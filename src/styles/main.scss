@@ -481,6 +481,9 @@ body {
   width: 90px;
   height: 90px;
 }
+.display-none {
+  display: none;
+}
 @media screen and (max-width: 340px) {
   .weather-tomorrow-text {
     font-size: 0.8rem;
@@ -516,5 +519,38 @@ body {
   .the-weather {
     min-height: 340px;
     height: 351px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .carousel {
+    display: none;
+  }
+
+  .the-weather {
+    height: 500px;
+    width: 30vw;
+  }
+  .computer-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+  .air-quality {
+    height: 500px;
+    width: 30vw;
+  }
+  .temperature-today-container {
+    height: 500px;
+    width: 60vw;
+  }
+  .main-computer {
+    display: flex;
+    justify-content: space-around;
+  }
+  .weather-prediction {
+    height: 80vh;
+    margin: 10px;
+    width: 20vw;
   }
 }
