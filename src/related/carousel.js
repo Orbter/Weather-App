@@ -26,8 +26,8 @@ function moveSlides() {
     console.log(slideWidth);
   };
   const updateDots = (currentDot, targetDot) => {
-    targetDot.classList.add('current-slide');
     currentDot.classList.remove('current-slide');
+    targetDot.classList.add('current-slide');
   };
   const updateButtons = (targetIndex, firstButton, secondButton, allSlides) => {
     if (targetIndex === 0) {

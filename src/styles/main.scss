@@ -263,8 +263,7 @@ body {
   font-size: 1.4rem;
   font-weight: 600;
 }
-.air-quality {
-}
+
 .air-quality-headline {
   font-weight: 700;
   font-size: 1.8rem;
@@ -477,4 +476,9 @@ body {
 .tomorrow-gif {
   width: 90px;
   height: 90px;
+}
+@media screen and (max-width: 340px) {
+  .weather-tomorrow-text {
+    font-size: 0.8rem;
+  }
 }

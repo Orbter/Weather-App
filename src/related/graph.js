@@ -1,7 +1,12 @@
 // ./related/graph.js
 import Chart from 'chart.js/auto';
 
+let myChartInstance = null;
+
 function createChart(array) {
+  if (myChartInstance) {
+    myChartInstance.destroy();
+  }
   const ctx = document.getElementById('chart').getContext('2d');
   const itemsLabels = [
     '00',
@@ -36,6 +41,7 @@ function createChart(array) {
     labels: itemsLabels,
     datasets: [
       {
+        label: 'Temperature', // Ensure this is set
         data: itemData,
         borderColor: 'rgb(33, 150, 243)',
         fill: true,
@@ -60,7 +66,8 @@ function createChart(array) {
     },
   };
 
-  return new Chart(ctx, config);
+  myChartInstance = new Chart(ctx, config);
+  return myChartInstance;
 }
 
 export { createChart };
