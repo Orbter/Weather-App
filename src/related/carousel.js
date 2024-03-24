@@ -12,10 +12,26 @@ function moveSlides() {
   };
 
   window.addEventListener('resize', () => {
+    const trackerContainer = document.querySelector(
+      '.carousel-tracker-continer'
+    );
+    trackerContainer.classList.add('no-transition');
     // Recalculate slide width
     slideWidth = slides[0].getBoundingClientRect().width;
-    // Reapply positions with the new width
+
     slides.forEach(setsSlidePosition);
+    const currentSlideIndex = slides.findIndex((slide) =>
+      slide.classList.contains('current-slide-card')
+    );
+    if (currentSlideIndex >= 0) {
+      const newTranslateX = slideWidth * currentSlideIndex;
+      // Adjust the track's transform property to align with the new slide positions
+      track.style.transform = `translateX(-${newTranslateX}px)`;
+    }
+    clearTimeout(window.resizingFinished);
+    window.resizingFinished = setTimeout(() => {
+      trackerContainer.classList.remove('no-transition');
+    }, 250); // Adjust timeout duration as needed
     // Potentially move to the current slide again to adjust positioning
   });
 

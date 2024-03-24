@@ -42,7 +42,7 @@ body {
   transition: opacity 0.2s; /* Specific transition */
   opacity: 0; /* Start with invisible */
   pointer-events: none; /* Prevent interaction when invisible */
-  z-index: 10;
+  z-index: 11;
 }
 
 .clicked {
@@ -120,6 +120,10 @@ body {
   position: relative;
   width: 100%; /* Ensure this container stretches to the width of its parent */
 }
+.no-transition {
+  transition: none !important;
+}
+
 .carousel-button {
   position: absolute;
   top: 50%;
@@ -480,5 +484,37 @@ body {
 @media screen and (max-width: 340px) {
   .weather-tomorrow-text {
     font-size: 0.8rem;
+  }
+  .weather-prediction-mini-text {
+    font-size: 0.8rem;
+  }
+  .mini-gif {
+    height: 58px;
+  }
+  .weather-prediction-mini-container {
+    gap: 0;
+  }
+  .weather-mini-container {
+    min-width: 70px;
+  }
+  .card {
+    padding: 10px;
+  }
+  .weather-data-headline {
+    font-size: 0.9rem;
+  }
+  .wind-gif {
+    width: 80px;
+    height: 80px;
+  }
+  .air-speed {
+    font-size: 3.2rem;
+  }
+  .air-quality-info {
+    gap: 8px;
+  }
+  .the-weather {
+    min-height: 340px;
+    height: 351px;
   }
 }

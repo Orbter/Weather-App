@@ -16,6 +16,13 @@ function navCreate() {
   });
   button.addEventListener('click', () => {
     updatingUi(search.value);
+    nav.classList.add('un-clicked');
+  });
+  search.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      updatingUi(search.value);
+      nav.classList.add('un-clicked');
+    }
   });
 }
 
