@@ -207,7 +207,6 @@ body {
 .weather-gif {
   width: 90px;
   height: 90px;
-  background-color: aqua;
   min-width: 90px;
 }
 .weather-info-container {
@@ -278,7 +277,6 @@ body {
   width: 90px;
   height: 90px;
   min-width: 90px;
-  background-color: aqua;
 }
 .air-quality-info {
   display: flex;
@@ -400,6 +398,10 @@ body {
   font-size: 3.7rem;
   font-weight: 600;
 }
+.weather-number {
+  font-size: 3.7rem;
+  font-weight: 600;
+}
 .weather-tomorrow-values {
   display: flex;
   align-items: center;
@@ -460,4 +462,19 @@ body {
 }
 .is-hidden {
   display: none;
+}
+.wind-gif {
+  width: 90px;
+  height: 90px;
+}
+.the-weather-gif {
+  width: 90px;
+  height: 90px;
+}
+.mini-gif {
+  height: 65px;
+}
+.tomorrow-gif {
+  width: 90px;
+  height: 90px;
 }

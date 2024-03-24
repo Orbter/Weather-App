@@ -10,6 +10,7 @@ async function getData(location) {
   const city = data.location.name;
   const country = data.location.country;
   const tempToday = data.current.temp_c;
+
   const feelsLike = data.current.feelslike_c;
   const humidity = data.current.humidity;
 
@@ -37,7 +38,7 @@ async function getData(location) {
   const hourArray = forecastDay.hour;
   const hourTemp = objToArray(hourArray);
 
-  console.log(hourTemp);
+  console.log(tempToday);
   // wind
   const windSpeed = data.current.wind_kph;
   const windDirection = data.current.wind_dir;

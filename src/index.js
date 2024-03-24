@@ -5,4 +5,4 @@ import { getData } from './related/data';
 import { updatingUi } from './related/updatingUi';
 navCreate();
 moveSlides();
-await updatingUi('tel aviv');
+updatingUi('tel aviv');
