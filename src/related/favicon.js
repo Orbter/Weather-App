@@ -15,45 +15,47 @@ import drizzle from '../icons/drop.gif';
 import house from '../icons/house.gif';
 
 function faviconGif(weather, place) {
-  const img = place;
+  let src;
+
   const now = new Date();
   const hour = now.getHours();
   if (weather.trim() === 'Sunny') {
-    img.src = sun;
+    src = sun;
   } else if (weather.trim() === 'Clear') {
-    img.src = night;
+    src = night;
   } else if (weather.trim() === 'Partly Cloudy') {
     if (hour >= 18 || hour < 6) {
-      img.src = cloudyNight;
+      src = cloudyNight;
     } else {
-      img.src = partlyCloudy;
+      src = partlyCloudy;
     }
   } else if (weather.trim() === 'Cloudy') {
-    img.src = cloudy;
+    src = cloudy;
   } else if (weather.trim() === 'Mist') {
-    img.src = mist;
+    src = mist;
   } else if (weather.trim() === 'Patchy rain nearby') {
-    img.src = patchyRain;
+    src = patchyRain;
   } else if (weather.trim() === 'Patchy snow nearby') {
-    img.src = patchySnow;
+    src = patchySnow;
   } else if (
     weather === 'Thundery outbreaks in nearby' ||
     weather === 'Heavy rain'
   ) {
-    img.src = heavyRain;
+    src = heavyRain;
   } else if (weather.trim() === 'Blizzard' || weather.includes('snow')) {
-    img.src = snow;
+    src = snow;
   } else if (weather.includes('rain')) {
-    img.src = rain;
+    src = rain;
   } else if (weather.trim() === 'Fog') {
-    img.src = fog;
+    src = fog;
   } else if (weather.includes('ice')) {
-    img.src = ice;
+    src = ice;
   } else if (weather.includes('drizzle')) {
-    img.src = drizzle;
+    src = drizzle;
   } else {
-    img.src = house;
+    src = house;
   }
+  place.forEach((img) => (img.src = src));
 }
 
 export { faviconGif };

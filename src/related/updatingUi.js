@@ -8,30 +8,31 @@ async function updatingUi(location) {
   // getting all the elements
   const city = document.querySelector('.city');
   const country = document.querySelector('.country');
-  const weatherNumber = document.querySelector('.weather-number');
-  const weatherText = document.querySelector('.weather-name');
-  const feelsLike = document.querySelector('.feels-like');
-  const humidity = document.querySelector('.humidity');
-  const chanceOfRain = document.querySelector('.chance-of-rain');
-  const weatherGif = document.querySelector('.the-weather-gif');
+  const weatherNumber = document.querySelectorAll('.weather-number');
+  const weatherText = document.querySelectorAll('.weather-name');
+  const feelsLike = document.querySelectorAll('.feels-like');
+  const humidity = document.querySelectorAll('.humidity');
+  const chanceOfRain = document.querySelectorAll('.chance-of-rain');
+  const weatherGif = document.querySelectorAll('.the-weather-gif');
   //
-  const airSpeed = document.querySelector('.air-speed');
-  const airQuality = document.querySelector('.air-quality-number');
-  const airQualityName = document.querySelector('.air-quality-name');
-  const airGif = document.querySelector('.wind-gif');
+  const airSpeed = document.querySelectorAll('.air-speed');
+  const airQuality = document.querySelectorAll('.air-quality-number');
+  const airQualityName = document.querySelectorAll('.air-quality-name');
+  const airGif = document.querySelectorAll('.wind-gif');
   //
-  const Tomorrow = document.querySelector('.weather-tomorrow-number');
-  const TomorrowText = document.querySelector('.weather-tomorrow-text');
-  const TomorrowGif = document.querySelector('.tomorrow-gif');
-  const twoDays = document.querySelector('.two-days');
-  const twoDaysText = document.querySelector('.two-days-text');
-  const twoDayGif = document.querySelector('.two-days-gif');
-  const threeDays = document.querySelector('.three-days');
-  const threeDaysText = document.querySelector('.three-days-text');
-  const threeDaysGif = document.querySelector('.three-days-gif');
-  const fourDays = document.querySelector('.four-days');
-  const fourDaysText = document.querySelector('.four-days-text');
-  const fourDaysGif = document.querySelector('.four-days-gif');
+  const Tomorrow = document.querySelectorAll('.weather-tomorrow-number');
+  const TomorrowText = document.querySelectorAll('.weather-tomorrow-text');
+  const TomorrowGif = document.querySelectorAll('.tomorrow-gif');
+  const twoDays = document.querySelectorAll('.two-days');
+  const twoDaysText = document.querySelectorAll('.two-days-text');
+  const twoDayGif = document.querySelectorAll('.two-days-gif');
+  const threeDays = document.querySelectorAll('.three-days');
+  const threeDaysText = document.querySelectorAll('.three-days-text');
+  const threeDaysGif = document.querySelectorAll('.three-days-gif');
+  const fourDays = document.querySelectorAll('.four-days');
+  const fourDaysText = document.querySelectorAll('.four-days-text');
+  const fourDaysGif = document.querySelectorAll('.four-days-gif');
+  const windAnimation = document.querySelectorAll('.wind-gif');
 
   const data = await getData(location);
 
@@ -43,22 +44,40 @@ async function updatingUi(location) {
   const airDirection = airDirectionConvector(data.windDirection);
   city.innerText = data.city;
   country.innerText = data.country;
-  weatherNumber.innerText = todayTemp;
-  weatherText.innerText = data.condition;
-  feelsLike.innerText = `${data.feelsLike}%`;
-  humidity.innerText = `${data.humidity}%`;
-  chanceOfRain.innerText = `${data.rain}%`;
-  airSpeed.innerText = data.windSpeed;
-  airQuality.innerText = data.AQI;
-  airQualityName.innerText = airDirection;
-  Tomorrow.innerText = tomorrowTemp;
-  TomorrowText.innerText = data.conditionTomorrow;
-  twoDays.innerText = twoDaysTemp;
-  twoDaysText.innerText = data.conditionTwoDays;
-  threeDays.innerText = threeDaysTemp;
-  threeDaysText.innerText = data.conditionThreeDay;
-  fourDays.innerText = fourDaysTemp;
-  fourDaysText.innerText = data.conditionFourDays;
+  everyItemUi(weatherNumber, todayTemp);
+  everyItemUi(weatherText, data.condition);
+  everyItemUi(feelsLike, `${data.feelsLike} C`);
+  everyItemUi(humidity, `${data.humidity}%`);
+  everyItemUi(chanceOfRain, `${data.rain}%`);
+  everyItemUi(airSpeed, data.windSpeed);
+  everyItemUi(airQuality, data.AQI);
+  everyItemUi(Tomorrow, tomorrowTemp);
+  everyItemUi(TomorrowText, data.conditionTomorrow);
+  everyItemUi(twoDays, twoDaysTemp);
+  everyItemUi(twoDaysText, data.conditionTwoDays);
+  everyItemUi(threeDays, threeDaysTemp);
+  everyItemUi(threeDaysText, data.conditionThreeDay);
+  everyItemUi(fourDays, fourDaysTemp);
+  everyItemUi(fourDaysText, data.conditionFourDays);
+  windAnimation.forEach((item) => {
+    item.src = windGif;
+  });
+  // weatherNumber.innerText = todayTemp;
+  //weatherText.innerText = data.condition;
+  //feelsLike.innerText = `${data.feelsLike}%`;
+  //humidity.innerText = `${data.humidity}%`;
+  //chanceOfRain.innerText = `${data.rain}%`;
+  //airSpeed.innerText = data.windSpeed;
+  //airQuality.innerText = data.AQI;
+  //airQualityName.innerText = airDirection;
+  //Tomorrow.innerText = tomorrowTemp;
+  //TomorrowText.innerText = data.conditionTomorrow;
+  //twoDays.innerText = twoDaysTemp;
+  //twoDaysText.innerText = data.conditionTwoDays;
+  //threeDays.innerText = threeDaysTemp;
+  //threeDaysText.innerText = data.conditionThreeDay;
+  //fourDays.innerText = fourDaysTemp;
+  //fourDaysText.innerText = data.conditionFourDays;
 
   // Gif
   airGif.src = windGif;
@@ -68,6 +87,7 @@ async function updatingUi(location) {
   faviconGif(data.conditionThreeDay, threeDaysGif);
   faviconGif(data.conditionFourDays, fourDaysGif);
 
+  // wind gif
   calculatingBar(data.AQI);
   const hourly = data.hourTemp;
   await createChart(hourly);
@@ -110,5 +130,11 @@ const airDirectionConvector = (letters) => {
   }
   return direction;
 };
+function everyItemUi(array, apiData) {
+  const text = apiData;
+  array.forEach((item) => {
+    item.innerText = text;
+  });
+}
 
 export { updatingUi };

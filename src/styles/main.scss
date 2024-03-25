@@ -394,7 +394,6 @@ body {
 .weather-tomorrow-gif {
   width: 90px;
   height: 90px;
-  background-color: aqua;
   min-width: 90px;
 }
 .weather-tomorrow-number {
@@ -521,14 +520,21 @@ body {
     height: 351px;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1000px) {
   .carousel {
     display: none;
   }
-
+  .main {
+    justify-content: space-evenly;
+    height: 92vh;
+  }
   .the-weather {
     height: 500px;
     width: 30vw;
+  }
+  .weather-info {
+    height: 10vw;
+    min-height: 120px;
   }
   .computer-container {
     display: flex;
@@ -542,15 +548,117 @@ body {
   }
   .temperature-today-container {
     height: 500px;
-    width: 60vw;
+    width: 95%;
+    margin: 20px;
   }
   .main-computer {
     display: flex;
     justify-content: space-around;
+    height: 92vh;
   }
   .weather-prediction {
-    height: 80vh;
+    height: 84.3vh;
     margin: 10px;
     width: 20vw;
+  }
+  .weather-prediction-container {
+    height: 60%;
+    justify-content: space-around;
+  }
+  .weather-prediction-mini-container {
+    border-radius: 20px;
+    height: 30%;
+    gap: 10px;
+  }
+  .weather-mini-container-prediction {
+    justify-content: center;
+    align-items: start;
+    min-width: 80px;
+    width: 50%;
+  }
+  .weather-prediction-mini-gif {
+    aspect-ratio: 1 / 1;
+    width: 8vw;
+    min-width: 85px;
+    max-width: 115px;
+  }
+  .weather-prediction-mini-num {
+    font-size: 2.7rem;
+  }
+  .weather-prediction-mini-text {
+    font-size: 0.8rem;
+  }
+  .weather-tomorrow-number {
+    font-size: 2.8rem;
+  }
+  .weather-tomorrow-text {
+    font-size: 0.8rem;
+  }
+  .tomorrow-container {
+    gap: 10px;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+  }
+  .weather-tomorrow-gif {
+    margin-left: 10px;
+    aspect-ratio: 1 / 1;
+    width: 8vw;
+    min-width: 85px;
+    max-width: 115px;
+  }
+  .weather-tomorrow-values {
+    font-size: 2rem;
+  }
+  .weather-tomorrow-container {
+    height: 15vh;
+    min-height: 150px;
+  }
+  .weather-mini-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .weather-gif {
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    width: 10vw;
+    height: 10vw;
+    min-height: 120px;
+    min-width: 120px;
+    justify-content: center;
+  }
+  .the-weather-gif {
+    aspect-ratio: 1 / 1;
+    width: 10vw;
+    height: 10vw;
+    min-height: 120px;
+    min-width: 120px;
+  }
+  .wind-gif {
+    aspect-ratio: 1 / 1;
+    width: 10vw;
+    height: 10vw;
+  }
+  .air-quality-gif {
+    aspect-ratio: 1 / 1;
+    width: 10vw;
+    height: 10vw;
+  }
+  .weather-info-container {
+    justify-content: center;
+  }
+  .mini-gif {
+    width: 100%;
+    height: 100%;
+  }
+  .tomorrow-gif {
+    width: 100%;
+    height: 100%;
+  }
+  #chart {
+    height: 500px;
+  }
+  .temperature {
   }
 }
