@@ -37,6 +37,7 @@ module.exports = {
       title: 'Webpack App',
       filename: 'index.html',
       template: 'src/template.html',
+      favicon: 'src/icons/weather-news.png', // Adjust the path as necessary
     }),
   ],
 };
