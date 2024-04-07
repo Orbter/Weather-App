@@ -1,6 +1,6 @@
 async function getData(location) {
   const url = `https://api.weatherapi.com/v1/forecast.json?key=e377a3a891a747e991e212521242003&q=${location}&days=5&aqi=yes&alerts=no`;
-
+  //  fixing the key
   // fetching the urls
   const response = await fetch(url);
 
